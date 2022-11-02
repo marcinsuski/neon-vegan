@@ -1,0 +1,241 @@
+:root {
+    --neonpink: hsl(317, 100%, 54%);
+    --bg-pink: hsl(323 21% 16%);
+}
+
+@font-face {
+    font-family: "Playlist";
+    src: url("../src/Fonts/Playlist.eot");
+    src: url("../src/Fonts/Playlist.eot?#iefix") format("embedded-opentype"),
+        url("../src/Fonts/Playlist.woff2") format("woff2"),
+        url("../src/Fonts/Playlist.woff") format("woff"),
+        url("../src/Fonts/Playlist.ttf") format("truetype"),
+        url("../src/Fonts/Playlist.svg#Playlist") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    body {
+        margin-top: 50px;
+        font-size: 12px;
+        width: 95vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .neon {
+        font-size: 4rem;
+    }
+}
+
+.neon {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: transparent;
+    letter-spacing: 0.05em;
+    font-size: 6rem;
+    font-family: "Playlist", sans-serif;
+    color: var(--neonpink);
+    border: var(--neonpink) 0.1em solid;
+    border-radius: 0.25em;
+    padding: 0.125em 1em;
+    position: relative;
+    text-shadow: 0 0 0.25em hsl(0 0% 100% / 0.3), 0 0 0.5rem currentColor;
+
+    box-shadow: inset 0 0 0.75em 0 var(--neonpink), 0 0 0.75em 0 var(--neonpink);
+    transition: background-color 100ms linear;
+}
+/*bottom-shadow */
+.neon::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    background: var(--neonpink);
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1.5em) rotateX(50deg) scale(1, 0.45);
+    filter: blur(1em);
+    opacity: 0.7;
+}
+
+.neon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    box-shadow: 0 0 1em 0.2em var(--neonpink);
+    transition: opacity 100ms linear;
+}
+
+.neon:hover::before,
+.neon:focus::before {
+    opacity: 1;
+}
+
+.neon:hover::after,
+.neon:focus::after {
+    opacity: 1;
+}
+
+.neon:hover,
+.neon:focus {
+    background: var(--neonpink);
+    color: var(--bg-pink);
+    text-shadow: none;
+}
+
+/*---------------------------------------------------*/
+
+.neon2 {
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+    letter-spacing: 0.05em;
+    font-size: 6rem;
+    font-family: "Playlist", sans-serif;
+    color: var(--neonpink);
+    position: relative;
+    text-shadow: 0 0 0.25em hsl(0 0% 100% / 0.3), 0 0 0.5rem currentColor;
+}
+
+/*bottom-shadow */
+.neon2::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    background: var(--neonpink);
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1.5em) rotateX(50deg) scale(1, 0.45);
+    filter: blur(1em);
+    opacity: 0.7;
+}
+
+.neon2::after {
+    content: "Vegan";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    text-shadow: 0 0 0.25em hsl(0 0% 100% / 0.3), 0 0 3rem currentColor;
+    transition: opacity 100ms linear;
+}
+
+.neon2:hover::before,
+.neon2:focus::before {
+    opacity: 1;
+}
+
+.neon2:hover::after,
+.neon2:focus::after {
+    opacity: 1;
+}
+
+.neon2:hover,
+.neon2:focus {
+    color: var(--neonpink);
+    text-shadow: 0 0 1em hsl(0 0% 100% / 0.3), 0 0 1em currentColor;
+}
+
+/*---------------------------------------------------*/
+
+.neon3 {
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+    letter-spacing: 0.05em;
+    font-size: 6rem;
+    font-family: "Playlist", sans-serif;
+    color: var(--neonpink);
+    position: relative;
+    text-shadow: 0 0 0.25em hsl(0 0% 100% / 0.3), 0 0 0.5rem currentColor;
+}
+
+/*bottom-shadow */
+.neon3::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    background: var(--neonpink);
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1.5em) rotateX(50deg) scale(1, 0.45);
+    filter: blur(1em);
+    opacity: 0.7;
+}
+
+.neon3::after {
+    content: "Vegan";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    text-shadow: 0 0 0.25em hsl(0 0% 100% / 0.3), 0 0 3rem currentColor;
+    transition: opacity 100ms linear;
+}
+
+.flicker-slow {
+    animation: flicker 3s linear infinite;
+}
+
+.flicker-fast {
+    animation: flicker 1s linear infinite;
+}
+
+@keyframes flicker {
+    0%,
+    19.999%,
+    22%,
+    62.999%,
+    64%,
+    64.999%,
+    70%,
+    100% {
+        //text-shadow: none;
+        opacity: 0.99;
+    }
+    20%,
+    21.999%,
+    63%,
+    63.999%,
+    65%,
+    69.999% {
+        opacity: 0.4;
+    }
+}
